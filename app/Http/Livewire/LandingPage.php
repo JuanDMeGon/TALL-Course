@@ -11,6 +11,8 @@ use Livewire\Component;
 class LandingPage extends Component
 {
     public $email;
+    public $showSubscribe = false;
+    public $showSuccess = false;
 
     protected $rules = [
         'email' => 'required|email:filter|unique:subscribers,email',
@@ -41,6 +43,8 @@ class LandingPage extends Component
 
 
         $this->reset('email');
+        $this->showSubscribe = false;
+        $this->showSuccess = true;
     }
 
     public function render()
