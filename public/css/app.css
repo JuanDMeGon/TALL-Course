@@ -31425,6 +31425,10 @@ select {
           animation: bounce 1s infinite;
 }
 
+[x-cloak] {
+  display: none;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
