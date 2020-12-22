@@ -77,8 +77,14 @@
         <p class="text-white text-5xl font-extrabold text-center mt-16">
             Great!
         </p>
-        <p class="text-white text-3xl text-center">
-            See you in your inbox.
-        </p>
+        @if (request()->has('verified') && request()->verified == 1)
+            <p class="text-white text-3xl text-center">
+                Thanks for confirming.
+            </p>
+        @else
+            <p class="text-white text-3xl text-center">
+                See you in your inbox.
+            </p>
+        @endif
     </x-modal>
 </div>
